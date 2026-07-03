@@ -19,3 +19,5 @@
 -The pretrained COCO model correctly detected common objects such as buses and people
 -It failed to recognize underwater pipelines because pipelines are not included in the COCO dataset
 -This confirms that fine-tuning on maritşme-specific datasets will be necessary
+
+Today I learned git status
