@@ -37,17 +37,34 @@ maritime-detection/
 └── notes.md
 ```
 
-## Progress
+## Current Progress
 
-## Week 1
-- Enviroment setup
--Git repository initialization
--Python virtual enviroment
--Ultralytics installation
--First YOLO detection
--First YOLO tracking experiment
+### Week 1
+- Set up the project environment.
+- Created a Python virtual environment.
+- Initialized a Git repository.
+- Installed Ultralytics YOLO11.
+- Ran first detection and tracking experiments.
+
+### Week 2
+- Read the maritime small object detection survey.
+- Learned why maritime object detection is challenging.
+- Studied IoU, mAP, Precision and Recall.
+
+### Week 3
+- Downloaded the Singapore Maritime dataset from Roboflow.
+- Exported the dataset in YOLO11 format.
+- Explored the dataset structure.
+- Learned the YOLO annotation format.
+- Visualized annotated images using OpenCV.
+
+
+
+
 
 ## Author
+
+
 
 Rana Kuşçu
 

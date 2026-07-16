@@ -21,3 +21,6 @@ data/datasets/
 # OS files
 .DS_Store
 bus.jpg
+
+# Generated outputs
+outputs/
