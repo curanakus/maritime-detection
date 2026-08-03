@@ -165,3 +165,39 @@ However, two important characteristics should be considered during evaluation:
 
 - Significant class imbalance (Vessel-ship represents 71.60% of all annotations).
 - Frame-level train/validation/test splitting may introduce similarity between evaluation sets.
+
+# Week 6 - Evaluation and Tracking Preparation
+
+## Evaluation Protocol
+
+- Evaluated the trained YOLO11n model on the validation split of the Singapore Maritime dataset.
+- Selected **mAP@50** as the primary evaluation metric.
+- Also monitored **Precision**, **Recall**, and **mAP@50-95** to evaluate detection and localization performance.
+
+## Training Results
+
+The training curves show consistent learning throughout the five training epochs.
+
+- Training losses (box, classification, and DFL) decrease steadily.
+- Validation losses follow the same downward trend.
+- Precision, Recall, mAP@50, and mAP@50-95 all improve during training.
+- No obvious signs of overfitting are observed after five epochs, although the model is still in an early training stage.
+
+## Exploratory Analysis of Difficult Images
+
+Inspection of the validation predictions reveals that:
+
+- Large vessels are detected reliably with high confidence.
+- Small boats and buoys near the horizon are the most challenging objects.
+- Low contrast, haze, and small object size reduce detection confidence.
+- Very few false positives are observed, while some distant objects are still missed.
+- These observations are consistent with the higher Precision than Recall.
+
+## SORT Overview
+
+Reviewed the basic principles of the SORT (Simple Online and Realtime Tracking) algorithm.
+
+- Kalman Filter predicts the next position of each tracked object.
+- Hungarian Algorithm associates new detections with existing tracks using IoU.
+- This allows objects to maintain consistent IDs across consecutive video frames.
+- Understanding this workflow provides a foundation for the upcoming tracking tasks.
