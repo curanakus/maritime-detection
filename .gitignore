@@ -24,3 +24,7 @@ bus.jpg
 
 # Generated outputs
 outputs/
+
+# Local comparison figures
+kayak_train_vs_test.jpg
+sailboat_train_vs_test.jpg
