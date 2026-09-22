@@ -61,11 +61,34 @@ maritime-detection/
 - Reconstructed the dataset using source-video-level grouping.
 - Verified that the grouped dataset contains no source-video overlap between splits.
 
-### Leak-Free Baseline and Experiments
+#
+### Source-Video Leakage
+
+The original dataset split contained frames from the same source videos across
+training, validation, and test sets.
+
+![Original split video leakage](docs/images/Figure_06_Original_Split_Video_Leakage.png)
+
+After grouping frames by source video, each source video was assigned to only
+one dataset split.
+
+![Grouped split without leakage](docs/images/Figure_07_Grouped_Split_No_Leakage.png)
+
+
+## Leak-Free Baseline and Experiments
 - Trained a YOLO11n baseline on the grouped dataset.
 - Best validation results: Precision 0.6943, Recall 0.4592, mAP50 0.4575, mAP50-95 0.3032.
 - Tested image size 960, reduced mosaic augmentation, longer training, and YOLO11s.
 - Performed initial error analysis on maritime object classes.
+
+
+### Experiment Comparison
+
+The following figure compares the main controlled experiments performed on the
+leak-free dataset split.
+
+![YOLO11 experiment comparison](docs/images/Figure_09_Experiment_Comparison.png)
+
 
 ## Current Status
 
