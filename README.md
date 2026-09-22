@@ -1,4 +1,4 @@
-# Maritime Detection Traineeship
+# Maritime Object Detection for Environmental Robotics
 
 This repository contains my work for the Maritime Detection Traineeship at the Laboratory for Autonomous Systems and Mobile Robotics (LAMOR), Faculty of Electrical Engineering and Computing (FER), University of Zagreb.
 
@@ -52,11 +52,26 @@ maritime-detection/
 - Studied IoU, mAP, Precision and Recall.
 
 ### Week 3
-- Downloaded the Singapore Maritime dataset from Roboflow.
-- Exported the dataset in YOLO11 format.
-- Explored the dataset structure.
-- Learned the YOLO annotation format.
-- Visualized annotated images using OpenCV.
+- Downloaded and explored the Singapore Maritime dataset.
+- Analyzed YOLO annotations and class distribution.
+
+### Dataset Quality and Leakage Analysis
+- Identified source-video leakage across the original train, validation, and test splits.
+- Found that all 63 source videos appeared across all three splits.
+- Reconstructed the dataset using source-video-level grouping.
+- Verified that the grouped dataset contains no source-video overlap between splits.
+
+### Leak-Free Baseline and Experiments
+- Trained a YOLO11n baseline on the grouped dataset.
+- Best validation results: Precision 0.6943, Recall 0.4592, mAP50 0.4575, mAP50-95 0.3032.
+- Tested image size 960, reduced mosaic augmentation, longer training, and YOLO11s.
+- Performed initial error analysis on maritime object classes.
+
+## Current Status
+
+The detection pipeline, dataset auditing, grouped splitting, baseline training, controlled experiments, and initial error analysis have been completed.
+
+Multi-object tracking is the next stage of the project.
 
 
 
